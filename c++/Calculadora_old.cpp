@@ -41,6 +41,5 @@ int main(){
     cout<<a*b;
     }
 }
-//para la proxima clase mejorar el codigo, ponganle opcion
 
 
