@@ -1,0 +1,55 @@
+sgfuygsuf
+
+Libro variables
+public
+private
+protectec
+
+
+Diagrama de clase:
+Private
+Libro
+Int id
+Int año
+string titulo
+string categoria
+string autor <-> Persona
+string editorial
+Public
+MEtodo
+Libro()
+Libro(año, titulo, autor, categoria)
+int getid()
+voidsetid(int_id)
+void imprimir()
+
+Biblioteca:
+Int id
+string nombre
+string direccion
+lista de Libros
+
+MEtodo
+Biblioteca()
+Biblioteca(Id, nombre, direccion)
+getters and setter
+Funciones
+Agregar_libro
+Instar_libros
+Prestar_libro
+Eliminar_libro
+
+1) 1----1
+2) 1----n
+3) n----1
+4) n----n
+Donde n es muchos
+
+Nivel relacional es optimo que las variables tengan relacional
+
+Se gestiona a traves de una lista principal el main
+Backend 
+Frondend
+
+Recomendacion; cuando crees variables, crea variables que tengan sentido
+

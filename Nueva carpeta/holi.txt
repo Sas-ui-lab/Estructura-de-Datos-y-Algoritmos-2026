@@ -1,0 +1,18 @@
+Variables tipo:
+-publica
+puede ser accedido desde cualquien
+-privado
+solo puede ser modificado en la misma clase
+-protected
+la misma clase o por sus hijos
+
+-herencia
+ventaja: reutiliza codigo
+
+Buenas practicas en la POO
+bloque de metodos (el ultimo)
+bloque de Variables (del medio)
+bloque de nombre de la clase (el primero)
+1.cuando se cree variables al nivel de clase en general son private
+2.no agreguen negocio a la clase
+3.las variables sirven para trasladar a base de datos y en base datos no va negocio

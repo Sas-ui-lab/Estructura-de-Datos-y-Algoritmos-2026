@@ -1,0 +1,136 @@
+Intercambio de Informacion
+
+
+protocolos de comunicacion que se da cuando intercambio comunicacion de un dispositivo a otro
+para ello dispositivo a y b deben manejar un mismo protocolo; formatos estandarizados para poder transmitir y procesar los datos de manera eficiennte
+Representar la informacion de manera estructurada mediante etiquetas
+
+XML: eXtensible Markup Language
+
+Caracteristicas:
+Uso de etiquetas
+Nos permite definir estructuras jerarquicas
+Facilita la validacion mediante 
+es extendible
+Se utiliza el servicio SOAT y sistemas empresariales
+
+estructura
+<exml UTF8>
+<estudiante>
+    <nombre>Juan</nombre>
+    <apellido>Perez</apellido>
+    <edad>20</edad>
+</estudiante>
+</xml>
+
+Ventajas:
+Informacion estructurada
+Realizar validacion de datos compleja
+Ideal para documentos extensos
+
+Desventajas:
+Tamaño del archivo puede ser grande
+Requiere mas recursos para procesar
+Utiliza muchos verbos y etiquetas
+
+JSON: Java Script Object Notation
+formato ligero para el intercambio de datos clave-valor
+Caracteristicas:
+Sintaxis sencilla y legible
+Menor tamaño de archivo
+faci lectura o entendimiento
+Procesamiento eficiente y rapido
+APIs web y aplicaciones moviles
+
+estructura
+{
+    "estudiante": {
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "edad": 20
+    }
+}
+
+Ventajas:
+Ligero y compacto
+Facil de leer y escribir
+Menor consumo de ancho de banda
+Aplicaciones web y moviles
+
+Desventajas:
+No es tan adecuado para documentos complejos
+No presenta validaciones
+
+
+get
+past
+put
+delete
+
+cada uno de estos va a tener su distinta arquitectura y funcion, por ejemplo get se utiliza para obtener informacion de un recurso especifico, post para enviar datos a un servidor, put para actualizar un recurso existente y delete para eliminar un recurso.
+
+el que emite, lo que va a hacer es estructurar, procesa la solicitud que esta pidiendo el usuario o cliente
+ejemplo
+
+Procesa la solicitud de un cliente para obtener información de un recurso específico, como un archivo o una base de datos. El servidor recibe la solicitud, la interpreta y devuelve la información solicitada en el formato adecuado (por ejemplo, JSON o XML).
+esa base de datos lo devuelve como una lista
+tanto en JSON como en XML, dependiendo de la preferencia del cliente o de la configuración del servidor.
+
+abro llaves y estan todos los productos
+
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Producto A",
+            "precio": 10.99
+        },
+        {
+            "id": 2,
+            "nombre": "Producto B",
+            "precio": 15.49
+        },
+        {
+            "id": 3,
+            "nombre": "Producto C",
+            "precio": 7.99
+        }
+    ]
+}
+
+y genera el archivo para comunicar y lo envia
+
+en la parte del cliente
+el cliente debe tener una app para traducir el protocolo, es decir, para interpretar la información que recibe del servidor. Por ejemplo, si el servidor envía datos en formato JSON, la aplicación del cliente debe ser capaz de parsear ese JSON y mostrar la información de manera comprensible para el usuario.
+uso de las etiquetas y tabla
+clave-valor
+genero la lista dependiendo de la app y lo muestro
+
+necesitamos dos mecanismos para la comuncicacion no solo el protocolo, sino tambien la forma de comunicacion, es decir, el medio por el cual se transmiten los datos. Esto puede incluir redes locales, internet, Bluetooth, entre otros. La elección del mecanismo de comunicación dependerá de factores como la distancia entre los dispositivos, la velocidad requerida y la seguridad de la transmisión.
+
+Como podemos ver esto mas claro?
+Herramientas:
+SOAPUI
+Postman
+Estas herramientas nos permiten simular y probar las solicitudes y respuestas entre el cliente y el servidor utilizando diferentes protocolos como HTTP, REST, SOAP, entre otros. Con estas herramientas, podemos enviar solicitudes GET, POST, PUT, DELETE y analizar las respuestas para asegurarnos de que la comunicación se está realizando correctamente. Además, nos permiten validar la estructura de los datos enviados y recibidos, lo que facilita la identificación de errores o problemas en la comunicación.
+
+
+Cual es la arquitectura para la arquitectu XML
+Genera el esquema XML toda la estructura del XML, es decir, define las etiquetas, los atributos y la jerarquía de los elementos. Esto se hace utilizando un lenguaje de definición de esquemas como XML Schema Definition (XSD) o Document Type Definition (DTD). El esquema XML actúa como una plantilla que especifica cómo debe ser la estructura del documento XML, qué elementos son obligatorios, cuáles son opcionales, y qué tipo de datos se espera en cada elemento. Esto permite validar los documentos XML contra el esquema para asegurarse de que cumplen con la estructura definida y que los datos son correctos.
+Esto se va a alimentar de entidades y respositorios, es decir, de donde se va a obtener la informacion para generar el XML, por ejemplo, una base de datos o un sistema de gestión de contenido. El proceso implica extraer los datos necesarios, estructurarlos según el esquema XML definido y luego generar el documento XML que se utilizará para la comunicación entre dispositivos o sistemas.
+
+empieza con la peticion del cliente, el cliente hace una solicitud al servidor para obtener información o realizar una acción específica. El servidor recibe la solicitud, procesa la información y genera el documento XML de acuerdo con el esquema definido. Luego, el servidor envía el documento XML de vuelta al cliente como respuesta a su solicitud. El cliente, a su vez, interpreta el documento XML recibido y utiliza la información contenida en él para mostrarla al usuario o para realizar otras acciones según sea necesario.
+
+Este repositorio contiene las entidades
+nombre, apellido, edad, etc. Estas entidades representan los datos que se van a utilizar para generar el documento XML. El proceso de generación del XML implica tomar estos datos de las entidades, estructurarlos según el esquema XML definido y luego crear el documento XML que se enviará al cliente como respuesta a su solicitud.
+
+Comparativa
+          XML   |    JSON
+Sintaxis: etiquetas | clave-valor
+Tamaño: más grande | más pequeño
+Legibilidad: menos legible | más legible
+Velocidad de procesamiento: más lento | más rápido
+Validación: XSD/DTD | JSON Schema ;que es un lenguaje de definición de esquemas para JSON que permite validar la estructura y los datos de los documentos JSON. Al igual que XML Schema Definition (XSD) para XML, JSON Schema define las reglas y restricciones que deben cumplirse en un documento JSON, como los tipos de datos, los valores permitidos, la presencia de campos obligatorios y la estructura jerárquica de los objetos y arrays. Esto facilita la validación y garantiza que los datos intercambiados entre sistemas sean consistentes y correctos.
+Facilidad de aprendizaje: más complejo | más sencillo
+U
+
